@@ -1,14 +1,16 @@
 ALU84
 ===
 
-A 75% keyboard kit made and sold by mechkeys.ca [More info on mechkeys.ca](https://mechkeys.ca)
+![alu84](https://i.imgur.com/wBfazDc.jpg)
 
-Keyboard Maintainer: [TurboMech](https://github.com/TurboMech)
-Hardware Supported: ALU84
-Hardware Availability: [mechkeys.ca](https://mechkeys.ca)
+A 75% keyboard made and sold by MECHKEYS [More info on MECHKEYS](https://mechkeys.ca).
+
+Keyboard Maintainer: [TurboMech](https://github.com/TurboMech)  
+Hardware Supported: ALU84  
+Hardware Availability: [MECHKEYS](https://mechkeys.ca)
 
 Make example for this keyboard (after setting up your build environment):
 
     make alu84:default
 
-See [build environment setup](https://docs.qmk.fm/build_environment_setup.html) then the [make instructions](https://docs.qmk.fm/make_instructions.html) for more information.
+See [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) then the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information.

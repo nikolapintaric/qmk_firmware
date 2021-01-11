@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>
-#include "hal.h"
+#include <hal.h>
 #include "timer.h"
 #include "wait.h"
 #include "print.h"
@@ -60,8 +60,8 @@ void matrix_init(void)
     palSetPadMode(GPIOC, 5,  PAL_MODE_OUTPUT_PUSHPULL);
     palSetPadMode(GPIOD, 0,  PAL_MODE_OUTPUT_PUSHPULL);
 #endif
-    memset(matrix, 0, MATRIX_ROWS);
-    memset(matrix_debouncing, 0, MATRIX_ROWS);
+    memset(matrix, 0, MATRIX_ROWS * sizeof(matrix_row_t));
+    memset(matrix_debouncing, 0, MATRIX_ROWS * sizeof(matrix_row_t));
 
     matrix_init_quantum();
 }
@@ -177,3 +177,22 @@ void matrix_print(void)
         xprintf("\n");
     }
 }
+
+__attribute__ ((weak))
+void matrix_init_kb(void) {
+    matrix_init_user();
+}
+
+__attribute__ ((weak))
+void matrix_scan_kb(void) {
+    matrix_scan_user();
+}
+
+__attribute__ ((weak))
+void matrix_init_user(void) {
+}
+
+__attribute__ ((weak))
+void matrix_scan_user(void) {
+}
+
