@@ -13,8 +13,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef POK4R_H
-#define POK4R_H
+#pragma once
 
 #include "quantum.h"
 
@@ -37,6 +36,3 @@
 	    { K30, K31, K32, K33, K34, K35, K36, K37, K38, K39, K3A}, \
 	    { K40, K41, K42, KC_NO,    KC_NO,    K45, K46, K47, K48, K49, K4A, K4B, K4C}  \
 }
-
-
-#endif

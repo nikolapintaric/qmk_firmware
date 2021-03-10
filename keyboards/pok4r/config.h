@@ -15,8 +15,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CONFIG_H
-#define CONFIG_H
+#pragma once
 
 #include "config_common.h"
 
@@ -42,12 +41,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
 */
-#define MATRIX_ROW_PINS { F6, F5, F4, F1, F0 }
+#define MATRIX_ROW_PINS { F6, F5, F4, F1, F7 }
 #define MATRIX_COL_PINS { D4, D5, C7, C6, D3, D2, D1, D0, B7, B3, B2, B1, B0}
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL, or CUSTOM_MATRIX */
 #define DIODE_DIRECTION COL2ROW
+#define LEADER_TIMEOUT 300
  
 // #define BACKLIGHT_PIN B7
 // #define BACKLIGHT_BREATHING
@@ -106,9 +106,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 /* key combination for magic key command */
-#define IS_COMMAND() ( \
-    keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \
-)
+/* #define IS_COMMAND() ( \ */
+/*     keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)) \ */
+/* ) */
 
 /* control how magic key switches layers */
 //#define MAGIC_KEY_SWITCH_LAYER_WITH_FKEYS  true
@@ -186,5 +186,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
 //#define MIDI_TONE_KEYCODE_OCTAVES 1
-
-#endif

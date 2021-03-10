@@ -21,4 +21,7 @@
 
 // place overrides here
 
+#define LCPO_KEYS KC_LCTL, KC_TRNS, KC_LBRC
+#define RCPC_KEYS KC_RCTL, KC_TRNS, KC_RBRC
+
 #endif
